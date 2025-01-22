@@ -1,12 +1,19 @@
 :root {
-	--base-size: 20px;
-	--gutter-size: calc(3 * var(--base-size));
+	--base-size: 16px;
+	--gutter-size: var(--base-size);
 
 	--color-primary: black;
 	--color-secondary: gold;
 	--color-background: tomato;
 
 	--font-size: (var(--base-size));
+}
+
+@media (min-width: 600px) {
+	:root {
+		--base-size: 20px;
+		--gutter-size: calc(3 * var(--base-size));
+	}
 }
 
 header {
