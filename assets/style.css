@@ -11,18 +11,19 @@
 
 header {
 	background-color: var(--color-background);
-	padding-block: calc(5 *var(--base-size));
+	padding-block: calc(5 * var(--base-size));
 }
 
 #main-content {
 	block-size: 75vh;
-	padding-
+	padding-top: var(--base-size);
+	padding-bottom: calc(2 * var(--base-size));
 }
 
 footer {
 	background-color: var(--color-secondary);
 	padding-top: var(--base-size);
-	padding-bottom: calc(5 *var(--base-size));
+	padding-bottom: calc(5 * var(--base-size));
 }
 
 .gutters {
