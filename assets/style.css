@@ -2,9 +2,9 @@
 	--base-size: 16px;
 	--gutter-size: var(--base-size);
 
-	--color-primary: black;
+	--color-primary: white;
 	--color-secondary: gold;
-	--color-background: tomato;
+	--color-background: black;
 
 	--font-size: (var(--base-size));
 }
@@ -16,9 +16,23 @@
 	}
 }
 
+#nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+li {
+	text-align: center;
+}
+ li em {
+	text-decoration: ;
+ }
+
+
 header {
+	color: white;
 	background-color: var(--color-background);
-	padding-block: calc(5 * var(--base-size));
+	padding-block: calc(2 * var(--base-size));
 }
 
 #main-content {
