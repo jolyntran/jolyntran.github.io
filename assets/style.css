@@ -1,63 +1,126 @@
 :root {
 	--base-size: 16px;
 	--gutter-size: var(--base-size);
-
-	--color-primary: white;
-	--color-secondary: gold;
-	--color-background: black;
-
-	--font-size: (var(--base-size));
+	--font-size: var(--base-size);
+  
+	--color-blue: #103662;
+	--color-light-blue: #eff6fb;
+	--color-yellow: #F6C443;
+	--color-light-yellow: #FFDE8A;
+  
+	--color-primary: var(--color-blue);
+	--color-secondary: var(--color-yellow);
+	--color-background: var(--color-light-blue);
+	--color-card-bg: white;
+	--color-border: #ccc;
+	--color-text-muted: #555;
+}
+  
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	margin: 0;
+	background-color: var(--color-background);
+	color: var(--color-primary);
+}
+  
+aside {
+	width: 100%;
+	padding: var(--gutter-size);
+	background-color: var(--color-blue);
+	border-bottom: 1px solid var(--color-border);
+	box-sizing: border-box;
+}
+  
+aside h2 {
+	margin-top: 0;
+	color: var(--color-light-blue);
+	font-size: 1.2rem;
+}
+  
+aside p {
+	margin-bottom: calc(0.75 * var(--base-size));
+	font-size: 0.95rem;
+}
+  
+aside a {
+	color: var(--color-light-blue);
+	text-decoration: none;
 }
 
-@media (min-width: 600px) {
+main {
+	padding: var(--gutter-size);
+	box-sizing: border-box;
+	background-color: var(--color-background);
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: calc(1.5 * var(--base-size));
+	margin-top: var(--base-size);
+}
+
+.project-card {
+	border: 1px solid var(--color-border);
+	border-radius: 12px;
+	padding: var(--base-size);
+	background-color: var(--color-card-bg);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card h3 {
+	margin-bottom: 5rem;
+	font-size: 1.5rem;
+	color: var(--color-primary);
+}
+
+.project-card a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.project-card p {
+	font-size: 0.75rem;
+	color: var(--color-light-blue);
+	margin: 0.5em 0 0;
+	background-color: var(--color-blue);
+	padding: 5px 10px;
+	border-radius: 1rem;
+}
+
+.ID{
+	display: flex;
+	gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
 	:root {
 		--base-size: 20px;
 		--gutter-size: calc(3 * var(--base-size));
 	}
+
+	body {
+		flex-direction: row;
+	}
+
+	aside {
+		width: 250px;
+		height: 100vh;
+		border-bottom: none;
+		border-right: 1px solid var(--color-border);
+		position: sticky;
+		top: 0;
+	}
+
+	main {
+		flex: 1;
+		padding: var(--gutter-size);
+	}
+
+	.project-grid {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
 }
 
-#nav {
-	display: flex;
-	justify-content: space-between;
-}
-
-li {
-	text-align: center;
-}
- li em {
-	text-decoration: ;
- }
-
-
-header {
-	color: white;
-	background-color: var(--color-background);
-	padding-block: calc(2 * var(--base-size));
-}
-
-#main-content {
-	block-size: 75vh;
-	padding-top: var(--base-size);
-	padding-bottom: calc(2 * var(--base-size));
-}
-
-footer {
-	background-color: var(--color-secondary);
-	padding-top: var(--base-size);
-	padding-bottom: calc(5 * var(--base-size));
-}
-
-.gutters {
-	padding-inline: var(--gutter-size);
-}
-
-img {
-
-}
-
-.hero-image {
-	width: 100%;
-	height: 33vh;
-	object-fit: cover;
-	overflow: hidden;
-}
