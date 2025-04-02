@@ -26,6 +26,7 @@ body {
 }
   
 aside {
+	color: var(--color-light-blue);
 	width: 100%;
 	padding: var(--gutter-size);
 	background-color: var(--color-blue);
@@ -35,7 +36,6 @@ aside {
   
 aside h2 {
 	margin-top: 0;
-	color: var(--color-light-blue);
 	font-size: 1.2rem;
 }
   
