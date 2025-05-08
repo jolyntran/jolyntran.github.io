@@ -83,40 +83,59 @@ main {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(1.5 * var(--base-size));
-	margin-top: var(--base-size);
 }
 
 .card {
-	border: 1px solid var(--color-border);
-	border-radius: 12px;
-	padding: var(--base-size);
-	background-color: var(--color-card-bg);
+	border-radius: 16px;
+	padding: 1.5rem;
+	text-align: center;
+	font-weight: bold;
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-	margin-bottom: 5rem;
+	margin: 0;
 	font-size: 1.5rem;
-	color: var(--color-primary);
 }
 
 .card a {
-	color: var(--color-primary);
 	text-decoration: none;
 }
 
-.card p {
-	font-size: 0.75rem;
-	color: var(--color-light-blue);
-	margin: 0.5em 0 0;
-	background-color: var(--color-blue);
-	padding: 5px 10px;
-	border-radius: 1rem;
+.card:nth-child(1) {
+	background-color: var(--card-lime);
+	color: var(--card-lime-text);
+}
+
+.card:nth-child(2) {
+	background-color: var(--card-pink);
+	color: var(--card-pink-text);
+}
+
+.card:nth-child(3) {
+	background-color: var(--card-maroon);
+	color: var(--card-maroon-text);
+}
+
+.card:nth-child(4) {
+	background-color: var(--card-yellow);
+	color: var(--card-yellow-text);
+}
+
+.card:nth-child(5) {
+	background-color: var(--card-teal);
+	color: var(--card-teal-text);
 }
 
 .tag{
-	display: flex;
-	gap: 0.5rem;
+	display: inline-block;
+	margin-top: 1rem;
+	font-size: 0.8rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	padding: 0.4rem 1rem;
+	border-radius: 999px;
 }
 
 @media (min-width: 768px) {
@@ -125,25 +144,7 @@ main {
 		--gutter-size: calc(3 * var(--base-size));
 	}
 
-	body {
-		flex-direction: row;
-	}
-
-	aside {
-		width: 250px;
-		height: 100vh;
-		border-bottom: none;
-		border-right: 1px solid var(--color-border);
-		position: sticky;
-		top: 0;
-	}
-
-	main {
-		flex: 1;
-		padding: var(--gutter-size);
-	}
-
-	.project-grid {
+	.grid {
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	}
 }
