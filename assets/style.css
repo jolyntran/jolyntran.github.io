@@ -1,14 +1,12 @@
 :root {
 	--base-size: 16px;
 	--gutter-size: var(--base-size);
-	--font-size: var(--base-size);
-  
+
 	--color-background: #FAF8F3;
 	--color-primary: #0F1C39;
-	--color-secondary: #F3B42F;          
+	--color-secondary: #F3B42F;
 	--color-accent: #FF577F;
 	--color-light-text: #ffffff;
-	--color-muted-text: #555;
 
 	--card-lime: #B7E264;
 	--card-pink: #F474D2;
@@ -22,58 +20,61 @@
 	--card-yellow-text: #432100;
 	--card-teal-text: #E5FBFF;
 }
-  
+
 body {
-	display: flex;
-	flex-direction: column;
-	font-family: sans-serif;
 	margin: 0;
+	font-family: 'Helvetica Neue', sans-serif;
 	background-color: var(--color-background);
 	color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
-  
+
 nav {
-	background-color: var(--color-primary);
 	width: 100%;
-	padding: var(--gutter-size);
+	background-color: var(--color-primary);
+	padding: 0.75rem 1rem;
+	box-sizing: border-box;
 }
-  
+
 nav ul {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
+	gap: 1.5rem;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	gap: 1rem;
+	flex-wrap: wrap;
 }
 
 nav a {
 	color: var(--color-light-text);
 	text-decoration: none;
-	font-size: 0.95rem;
+	font-size: 1rem;
 }
 
 header {
 	text-align: center;
-	margin: 3rem 1rem 2rem;
+	margin: 4rem 1rem 3rem;
 }
 
 header h1 {
-	font-size: 2.8rem;
-	font-weight: 700;
-	line-height: 1.2;
+	font-size: 3.2rem;
+	font-weight: 600;
+	line-height: 1.1;
+	font-family: Georgia, serif;
 }
 
 main {
-	padding: var(--gutter-size);
-	box-sizing: border-box;
 	width: 100%;
+	max-width: 1200px;
+	padding: 0 1.5rem 4rem;
+	box-sizing: border-box;
 }
 
 .showcase h2 {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	font-weight: 500;
 	text-align: center;
 	margin-bottom: 2rem;
@@ -82,25 +83,42 @@ main {
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: calc(1.5 * var(--base-size));
+	gap: 2rem;
+	justify-content: center;
 }
 
 .card {
-	border-radius: 16px;
-	padding: 1.5rem;
+	border-radius: 18px;
+	padding: 2rem 1rem;
 	text-align: center;
 	font-weight: bold;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
-	margin: 0;
-	font-size: 1.5rem;
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .card a {
+	display: block;
+	color: inherit;
 	text-decoration: none;
+}
+
+.card h3 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.tag {
+	font-size: 1rem;
+	font-weight: normal;
+	background-color: rgba(255, 255, 255, 0.15);
+	padding: 0.4rem 1rem;
+	border-radius: 999px;
+	display: inline-block;
 }
 
 .card:nth-child(1) {
@@ -128,24 +146,13 @@ main {
 	color: var(--card-teal-text);
 }
 
-.tag{
-	display: inline-block;
-	margin-top: 1rem;
-	font-size: 0.8rem;
-	background-color: rgba(255, 255, 255, 0.2);
-	color: white;
-	padding: 0.4rem 1rem;
-	border-radius: 999px;
-}
-
 @media (min-width: 768px) {
 	:root {
 		--base-size: 20px;
-		--gutter-size: calc(3 * var(--base-size));
+		--gutter-size: calc(2 * var(--base-size));
 	}
 
 	.grid {
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 }
-
