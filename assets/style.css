@@ -1,31 +1,20 @@
 :root {
 	--base-size: 16px;
 	--gutter-size: var(--base-size);
-
-	--color-background: #FAF8F3;
-	--color-primary: #0F1C39;
-	--color-secondary: #F3B42F;
-	--color-accent: #FF577F;
-	--color-light-text: #ffffff;
-
-	--card-lime: #B7E264;
-	--card-pink: #F474D2;
-	--card-maroon: #822B57;
-	--card-yellow: #F9B64D;
-	--card-teal: #116A7B;
-
-	--card-lime-text: var(--color-primary);
-	--card-pink-text: #2C002E;
-	--card-maroon-text: #FFF0F5;
-	--card-yellow-text: #432100;
-	--card-teal-text: #E5FBFF;
+	--font-header: 'Playfair Display';
+	--font-body: 'Just Me Again Down Here';
+	--color-blue-bg: #004CFF;
+	--color-white: #FFFFFF;
+	--color-lime: #B7E264;
+	--color-pink: #C84AE0;
+	--color-black: #23180F;
 }
 
 body {
 	margin: 0;
-	font-family: 'Helvetica Neue', sans-serif;
-	background-color: var(--color-background);
-	color: var(--color-primary);
+	font-family: var(--font-header);
+	background-color: var(--color-blue-bg);
+	color: var(--color-white);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,7 +22,7 @@ body {
 
 nav {
 	width: 100%;
-	background-color: var(--color-primary);
+	background-color: var(--color-blue-bg);
 	padding: 0.75rem 1rem;
 	box-sizing: border-box;
 }
@@ -41,64 +30,76 @@ nav {
 nav ul {
 	display: flex;
 	justify-content: center;
-	gap: 1.5rem;
+	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	flex-wrap: wrap;
+	gap: 1.5rem;
 }
 
 nav a {
-	color: var(--color-light-text);
+	font-family: var(--font-body);
+	color: var(--color-white);
 	text-decoration: none;
 	font-size: 1rem;
 }
 
+/* Header */
 header {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	margin: 4rem 1rem 3rem;
 }
 
 header h1 {
-	font-size: 3.2rem;
-	font-weight: 600;
+	color: var(--color-white);
+	font-family: var(--font-header);
+	font-size: 4.5rem;
 	line-height: 1.1;
-	font-family: Georgia, serif;
+	font-weight: 600;
+	max-width: 800px;
+	padding: 0 1rem;
 }
 
 main {
 	width: 100%;
-	max-width: 1200px;
-	padding: 0 1.5rem 4rem;
+	max-width: 1400px;
+	padding: 0 2rem 5rem;
 	box-sizing: border-box;
 }
 
 .showcase h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
+	font-family: var(--font-body);
+	font-size: 2rem;
+	font-weight: 400;
 	text-align: center;
 	margin-bottom: 2rem;
+	color: var(--color-white);
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 2rem;
+	gap: 2.5rem;
 	justify-content: center;
 }
 
 .card {
-	border-radius: 18px;
-	padding: 2rem 1rem;
+	border-radius: 24px;
+	padding: 3rem 2rem;
 	text-align: center;
 	font-weight: bold;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	min-height: 220px;
 }
 
 .card:hover {
 	transform: translateY(-6px);
-	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .card a {
@@ -108,51 +109,43 @@ main {
 }
 
 .card h3 {
-	font-size: 2rem;
-	margin-bottom: 0.5rem;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
 }
 
 .tag {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: normal;
 	background-color: rgba(255, 255, 255, 0.15);
-	padding: 0.4rem 1rem;
+	padding: 0.5rem 1.2rem;
 	border-radius: 999px;
 	display: inline-block;
 }
 
+/* Themed Cards */
 .card:nth-child(1) {
 	background-color: var(--card-lime);
 	color: var(--card-lime-text);
 }
-
 .card:nth-child(2) {
 	background-color: var(--card-pink);
 	color: var(--card-pink-text);
 }
-
 .card:nth-child(3) {
 	background-color: var(--card-maroon);
 	color: var(--card-maroon-text);
 }
-
 .card:nth-child(4) {
 	background-color: var(--card-yellow);
 	color: var(--card-yellow-text);
 }
-
 .card:nth-child(5) {
 	background-color: var(--card-teal);
 	color: var(--card-teal-text);
 }
 
 @media (min-width: 768px) {
-	:root {
-		--base-size: 20px;
-		--gutter-size: calc(2 * var(--base-size));
-	}
-
 	.grid {
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
 }
