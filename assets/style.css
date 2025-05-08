@@ -12,6 +12,7 @@
 
 body {
 	margin: 0;
+	padding: 1rem;
 	font-family: var(--font-header);
 	background-color: var(--color-blue-bg);
 	color: var(--color-white);
@@ -51,12 +52,13 @@ header {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	padding-bottom: 2rem;
 }
 
 header h1 {
 	color: var(--color-white);
 	font-family: var(--font-header);
-	font-size: 3.15rem;
+	font-size: 2.875rem;
 	line-height: 4rem;
 	font-weight: 600;
 	letter-spacing: .05rem;
