@@ -30,30 +30,29 @@ body {
 	margin: 0;
 	background-color: var(--color-background);
 	color: var(--color-primary);
+	align-items: center;
 }
   
-aside {
-	color: var(--color-light-blue);
+nav {
+	background-color: var(--color-primary);
 	width: 100%;
 	padding: var(--gutter-size);
-	background-color: var(--color-blue);
-	border-bottom: 1px solid var(--color-border);
-	box-sizing: border-box;
 }
   
-aside h2 {
-	margin-top: 0;
-	font-size: 1.2rem;
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 1rem;
 }
-  
-aside p {
-	margin-bottom: calc(0.75 * var(--base-size));
-	font-size: 0.95rem;
-}
-  
-aside a {
-	color: var(--color-light-blue);
+
+nav a {
+	color: var(--color-light-text);
 	text-decoration: none;
+	font-size: 0.95rem;
 }
 
 main {
