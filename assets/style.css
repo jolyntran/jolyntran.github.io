@@ -49,6 +49,12 @@ nav ul {
 	gap: 1rem;
 }
 
+nav a {
+	color: var(--color-light-text);
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
 header {
 	text-align: center;
 	margin: 3rem 1rem 2rem;
@@ -60,16 +66,17 @@ header h1 {
 	line-height: 1.2;
 }
 
-nav a {
-	color: var(--color-light-text);
-	text-decoration: none;
-	font-size: 0.95rem;
-}
-
 main {
 	padding: var(--gutter-size);
 	box-sizing: border-box;
 	width: 100%;
+}
+
+.showcase h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .grid {
