@@ -56,16 +56,17 @@ header {
 header h1 {
 	color: var(--color-white);
 	font-family: var(--font-header);
-	font-size: 3.25rem;
-	line-height: 1.1;
+	font-size: 3.15rem;
+	line-height: 4rem;
 	font-weight: 600;
+	letter-spacing: .05rem;
 }
 
 main {
 	width: 100%;
-	max-width: 1400px;
-	padding: 0 2rem 5rem;
-	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .showcase h2 {
@@ -85,17 +86,21 @@ main {
 }
 
 .card {
-	border-radius: 24px;
-	padding: 3rem 2rem;
+	border-radius: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	font-weight: bold;
+	position: relative;
 	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	min-height: 220px;
+	min-height: 20rem;
+	width: 17rem;
 }
 
 .card:hover {
-	transform: translateY(-6px);
+	transform: rotate(var(--card-rotation, 0deg)) scale(1.03);
 	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -106,42 +111,86 @@ main {
 }
 
 .card h3 {
-	font-size: 2.5rem;
+	font-size: 2.25rem;
 	margin-bottom: 1rem;
 	font-family: var(--font-header);
+	font-weight: 550;
 	text-transform: uppercase;
 }
 
 .tag {
 	font-size: 1.2rem;
 	font-family: var(--font-body);
-	padding: 0.5rem 1.2rem;
-	border-radius: 999px;
 	display: inline-block;
 }
 
 .card:nth-child(1) {
 	background-color: var(--color-lime);
 	color: var(--color-black);
+	transform: rotate(-2deg);
 }
 .card:nth-child(2) {
 	background-color: var(--color-pink);
 	color: var(--color-white);
+	transform: rotate(1.5deg);
 }
 
 .card:nth-child(3) {
 	background-color: var(--color-white);
 	color: var(--color-blue-bg);
+	transform: rotate(-1deg);
 }
 
 .card:nth-child(4) {
 	background-color: var(--color-lime);
 	color: var(--color-black);
+	transform: rotate(2.5deg);
 }
 
 .card:nth-child(5) {
 	background-color: var(--color-white);
 	color: var(--color-blue-bg);
+	transform: rotate(-1.8deg);
+}
+
+
+.note {
+	position: absolute;
+	font-family: var(--font-body);
+	font-size: 1.5rem;
+	color: var(--color-black);
+	background-color: var(--color-white);
+	line-height: 2rem;
+	padding: 0.4rem 0.6rem;
+	border-radius: 0.25rem;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+	transform: rotate(-8deg);
+	top: -1rem;
+	left: 1rem;
+	z-index: 2;
+}
+
+.card:nth-child(2) .note {
+	transform: rotate(10deg);
+	top: 14.5rem;
+	right: 2rem;
+}
+
+.card:nth-child(3) .note {
+	transform: rotate(-5deg);
+	top: 14rem;
+	left: 4rem;
+}
+
+.card:nth-child(4) .note {
+	transform: rotate(7deg);
+	top: 3rem;
+	left: -1.8rem;
+}
+
+.card:nth-child(5) .note {
+	transform: rotate(-12deg);
+	left: 4rem;
 }
 
 @media (min-width: 768px) {
