@@ -3,17 +3,24 @@
 	--gutter-size: var(--base-size);
 	--font-size: var(--base-size);
   
-	--color-blue: #103662;
-	--color-light-blue: #eff6fb;
-	--color-yellow: #F6C443;
-	--color-light-yellow: #FFDE8A;
-  
-	--color-primary: var(--color-blue);
-	--color-secondary: var(--color-yellow);
-	--color-background: var(--color-light-blue);
-	--color-card-bg: white;
-	--color-border: #ccc;
-	--color-text-muted: #555;
+	--color-background: #FAF8F3;
+	--color-primary: #0F1C39;
+	--color-secondary: #F3B42F;          
+	--color-accent: #FF577F;
+	--color-light-text: #ffffff;
+	--color-muted-text: #555;
+
+	--card-lime: #B7E264;
+	--card-pink: #F474D2;
+	--card-maroon: #822B57;
+	--card-yellow: #F9B64D;
+	--card-teal: #116A7B;
+
+	--card-lime-text: var(--color-primary);
+	--card-pink-text: #2C002E;
+	--card-maroon-text: #FFF0F5;
+	--card-yellow-text: #432100;
+	--card-teal-text: #E5FBFF;
 }
   
 body {
