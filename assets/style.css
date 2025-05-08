@@ -97,6 +97,7 @@ main {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	min-height: 20rem;
 	width: 17rem;
+	border: 0.175rem solid var(--color-black);
 }
 
 .card:hover {
@@ -168,6 +169,7 @@ main {
 	top: -1rem;
 	left: 1rem;
 	z-index: 2;
+	border: 0.175rem solid var(--color-black);
 }
 
 .card:nth-child(2) .note {
