@@ -49,6 +49,17 @@ nav ul {
 	gap: 1rem;
 }
 
+header {
+	text-align: center;
+	margin: 3rem 1rem 2rem;
+}
+
+header h1 {
+	font-size: 2.8rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
 nav a {
 	color: var(--color-light-text);
 	text-decoration: none;
@@ -58,17 +69,17 @@ nav a {
 main {
 	padding: var(--gutter-size);
 	box-sizing: border-box;
-	background-color: var(--color-background);
+	width: 100%;
 }
 
-.project-grid {
+.grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: calc(1.5 * var(--base-size));
 	margin-top: var(--base-size);
 }
 
-.project-card {
+.card {
 	border: 1px solid var(--color-border);
 	border-radius: 12px;
 	padding: var(--base-size);
@@ -76,18 +87,18 @@ main {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-card h3 {
+.card h3 {
 	margin-bottom: 5rem;
 	font-size: 1.5rem;
 	color: var(--color-primary);
 }
 
-.project-card a {
+.card a {
 	color: var(--color-primary);
 	text-decoration: none;
 }
 
-.project-card p {
+.card p {
 	font-size: 0.75rem;
 	color: var(--color-light-blue);
 	margin: 0.5em 0 0;
@@ -96,7 +107,7 @@ main {
 	border-radius: 1rem;
 }
 
-.ID{
+.tag{
 	display: flex;
 	gap: 0.5rem;
 }
